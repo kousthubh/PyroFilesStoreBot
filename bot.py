@@ -74,8 +74,6 @@ async def start(bot: Client, cmd: Message):
                     [
                         InlineKeyboardButton("my owner", url="https://t.me/jack_sparow119"),
                     ],
-    else:
-        try:
             try:
                 file_id = int(b64_to_str(usr_cmd).split("_")[-1])
             except (Error, UnicodeDecodeError):
