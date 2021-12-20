@@ -71,14 +71,9 @@ async def start(bot: Client, cmd: Message):
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
                     [
                         InlineKeyboardButton("my owner", url="https://t.me/jack_sparow119"),
                     ],
-                    ]
-                ]
-            )
-        )
     else:
         try:
             try:
