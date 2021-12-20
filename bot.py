@@ -75,6 +75,10 @@ async def start(bot: Client, cmd: Message):
                     [
                         InlineKeyboardButton("join our channel", url="https://t.me/filmyfunda_movies"),
                         InlineKeyboardButton("my owner", url="https://t.me/jack_sparow119")
+                    ],
+                    [
+                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
+                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
                     ]
                 ]
             )
@@ -116,7 +120,7 @@ async def main(bot: Client, message: Message):
                 return
 
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group](https://t.me/JoinOT)",
+            await message.reply_text("Sorry, You are banned!\n\nContact [my owner](https://t.me/jack_sparow119)",
                                      disable_web_page_preview=True)
             return
 
@@ -314,8 +318,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://t.me/nothing_is_ther")
+                        InlineKeyboardButton("my owner",
+                                             url="https://t.me/jack_sparow119")
                     ],
                     [
                         InlineKeyboardButton("Go Home", callback_data="gotohome"),
@@ -333,8 +337,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://t.me/nothing_is_ther")
+                        InlineKeyboardButton("my owner",
+                                             url="https://t.me/jack_sparow119")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -354,6 +358,10 @@ async def button(bot: Client, cmd: CallbackQuery):
                     [
                         InlineKeyboardButton("join our channel", url="https://t.me/filmyfunda_movies"),
                         InlineKeyboardButton("my owner", url="https://t.me/jack_sparow119")
+                    ],
+                    [
+                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
+                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
                     ]
                 ]
             )
@@ -407,7 +415,11 @@ async def button(bot: Client, cmd: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("join our channel", url="https://t.me/filmyfunda_movies"),
-                        InlineKeyboardButton("Bot owner", url="https://t.me/jack_sparow119")
+                        InlineKeyboardButton("my owner", url="https://t.me/jack_sparow119")
+                    ],
+                    [
+                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
+                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
                     ]
                 ]
             )
