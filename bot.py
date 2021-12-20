@@ -71,11 +71,17 @@ async def start(bot: Client, cmd: Message):
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
+                [
                     [
-                        InlineKeyboardButton("my owner", url="https://t.me/jack_sparow119"),
-                    ],
-        else:
-             try:
+                        InlineKeyboardButton("join our channel", url="https://t.me/filmyfunda_movies"),
+                        InlineKeyboardButton("my owner", url="https://t.me/jack_sparow119")
+                    ]
+                ]
+            )
+        )
+    else:
+        try:
+            try:
                 file_id = int(b64_to_str(usr_cmd).split("_")[-1])
             except (Error, UnicodeDecodeError):
                 file_id = int(usr_cmd.split("_")[-1])
@@ -110,7 +116,7 @@ async def main(bot: Client, message: Message):
                 return
 
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [my owner](https://t.me/jack_sparow119)",
+            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group](https://t.me/JoinOT)",
                                      disable_web_page_preview=True)
             return
 
@@ -304,14 +310,54 @@ async def button(bot: Client, cmd: CallbackQuery):
         await cmd.message.edit(
             Config.ABOUT_BOT_TEXT,
             parse_mode="Markdown",
-            disable_web_page_preview=True
-            
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("Source Codes of Bot",
+                                             url="https://t.me/nothing_is_ther")
+                    ],
+                    [
+                        InlineKeyboardButton("Go Home", callback_data="gotohome"),
+                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                    ]
+                ]
+            )
+        )
+
+    elif "aboutdevs" in cb_data:
+        await cmd.message.edit(
+            Config.ABOUT_DEV_TEXT,
+            parse_mode="Markdown",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("Source Codes of Bot",
+                                             url="https://t.me/nothing_is_ther")
+                    ],
+                    [
+                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
+                        InlineKeyboardButton("Go Home", callback_data="gotohome")
+                    ]
+                ]
+            )
+        )
 
     elif "gotohome" in cb_data:
         await cmd.message.edit(
             Config.HOME_TEXT.format(cmd.message.chat.first_name, cmd.message.chat.id),
             parse_mode="Markdown",
             disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("join our channel", url="https://t.me/filmyfunda_movies"),
+                        InlineKeyboardButton("my owner", url="https://t.me/jack_sparow119")
+                    ]
+                ]
+            )
+        )
 
     elif "refreshForceSub" in cb_data:
         if Config.UPDATES_CHANNEL:
@@ -357,6 +403,15 @@ async def button(bot: Client, cmd: CallbackQuery):
             text=Config.HOME_TEXT.format(cmd.message.chat.first_name, cmd.message.chat.id),
             parse_mode="Markdown",
             disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("join our channel", url="https://t.me/filmyfunda_movies"),
+                        InlineKeyboardButton("Bot owner", url="https://t.me/jack_sparow119")
+                    ]
+                ]
+            )
+        )
 
     elif cb_data.startswith("ban_user_"):
         user_id = cb_data.split("_", 2)[-1]
