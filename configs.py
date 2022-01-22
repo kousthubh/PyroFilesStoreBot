@@ -30,9 +30,9 @@ Send me any file I will save it in my Database. Also works for channel. Add me t
 
 📡 **Hosted on:** [Heroku](https://heroku.com)
 
-👥 **my owner:** [jack_sparow119](https://t.me/jack_sparow119)
+👥 **my owner:** [@Nitinmaan0007](https://t.me/Nitinmaan0007)
 
-📢 **our channel:** [filmy funda movies](https://t.me/filmyfunda_movies)
+📢 **our channel:** [Itz Sowtime](https://t.me/itz_showtime143)
 """
 	ABOUT_DEV_TEXT = f"""
 🧑🏻‍💻 **Developer:** AbirHasan
