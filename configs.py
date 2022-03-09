@@ -30,12 +30,12 @@ Send me any file I will save it in my Database. Also works for channel. Add me t
 
 📡 **Hosted on:** [Heroku](https://heroku.com)
 
-👥 **my owner:** [@Nitinmaan0007](https://t.me/Half_Intelligent_2)
+👥 **my owner:** [@Half_Intelligent_2](https://t.me/Half_Intelligent_2)
 
-📢 **our channel:** [Itz Sowtime](https://t.me/rk_serial)
+📢 **our channel:** [RK SERIAL](https://t.me/rk_serial)
 """
 	ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 **Developer:** AbirHasan
+🧑🏻‍💻 **Developer:** Half Intelligent
 
 Developer is Super Noob. Just Learning from Official Docs.
 
